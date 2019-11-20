@@ -16,6 +16,7 @@
       cloud: ospcloud
       server: 'frontend'
     register: openstack_info
+  - debug: var=openstack_info
 
   - name: Curl website
     command: curl "http://{{item.public_v4}}"
